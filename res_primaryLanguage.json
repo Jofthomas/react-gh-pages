@@ -16,7 +16,7 @@
         "description": "A project that will let you play the first level of one of the most iconic games. You can then enjoy a trained agent perform on this same level.",
         "images": [
           "images/portfolio/Mario.png",
-          "http://127.0.0.1:5000/Mario",        
+          "http://192.168.43.3:5000/Mario",        
           "images/portfolio/Mario-agent-step-0-to-step-50000.mp4"
         ],
         "url": "",
@@ -52,7 +52,7 @@
         "description": "Training an Ai to play this famous game. Can you beat it ? ",
         "images": [
           "images/portfolio/SpaceInv.png",
-          "http://127.0.0.1:5000/SpaceInvaders"
+          "http://192.168.43.3:5000/SpaceInvaders"
         ],
         "url": "https://github.com",
         "technologies": [
@@ -95,7 +95,7 @@
         "description": "Agent that can play Breakout better than you.",
         "images": [
           "images/portfolio/Brekout.png",
-          "http://127.0.0.1:5000/Breakout",
+          "http://192.168.43.3:5000/Breakout",
           "images/portfolio/final-model-a2c-BreakoutNoFrameskip-v4-step-0-to-step-20000.mp4"
         ],
         "url": "https://github.com",
@@ -143,7 +143,7 @@
         "description": "Bot that can play Chess reasonably well. AT least it can beat me a total amateur",
         "images": [
           "images/portfolio/PipChess.png",
-          "http://127.0.0.1:5000/"
+          "http://192.168.43.3:5000/"
         ],
         "url": "https://github.com",
         "technologies": [
