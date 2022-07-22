@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)https://25ktfxhjze7-496ff2e9c6d22116-0-colab.googleusercontent.com/outputframe.html?vrz=colab-20220512-060046-RC00_447973966 -->
+<html theme="dark" editor="default dark" style="overflow-y: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+  // Avoid arrow function syntax to stay ES5 compatible for the sake of googlebot.
+  window.addEventListener('message', function(message)  {
+    if (message.source != window.parent) {
+      return;
+    }
+    if (message.data.sandboxed_iframe_evaluation) {
+      // Message is available in scope so evaluated script can get params from
+      // it.
+      window.currentMessage = message;
+      eval.call(null, message.data.sandboxed_iframe_evaluation);
+      delete window.currentMessage;
+    }
+  });
+</script>
+<style>html{--paper-blue-200:#90caf9;--paper-blue-400:#42a5f5;--paper-blue-500:#2196f3;--paper-blue-700:#1976d2;--paper-blue-900:#0d47a1;--paper-blue-a100:#82b1ff;--paper-blue-a200:#448aff;--paper-blue-a400:#2979ff;--paper-blue-a700:#2962ff;--paper-orange-50:#fff3e0;--paper-orange-100:#ffe0b2;--paper-orange-200:#ffcc80;--paper-orange-300:#ffb74d;--paper-orange-400:#ffa726;--paper-orange-500:#ff9800;--paper-orange-700:#f57c00;--paper-grey-50:#fafafa;--paper-grey-100:#f5f5f5;--paper-grey-200:#eeeeee;--paper-grey-300:#e0e0e0;--paper-grey-400:#bdbdbd;--paper-grey-500:#9e9e9e;--paper-grey-600:#757575;--paper-grey-700:#616161;--paper-grey-800:#424242;--paper-grey-900:#212121;--paper-red-100:#ffcdd2;--paper-red-a700:#d50000;--paper-green-a700:#00c853;--paper-white:#ffffff;--google-blue-600:#1a73e8;--box-shadow-elevation-2dp:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);--box-shadow-elevation-3dp:0 3px 4px 0 rgba(0,0,0,0.14),0 1px 8px 0 rgba(0,0,0,0.12),0 3px 3px -2px rgba(0,0,0,0.4);--paper-font-subhead-font-size:16px;--paper-font-subhead-font-weight:400;--paper-font-subhead-line-height:24px;--paper-font-body1-font-weight:400;--paper-font-body1-line-height:20px}html{overflow-y:hidden}body{background:var(--colab-primary-surface-color);color:var(--colab-primary-text-color);font-family:var(--colab-chrome-font-family);font-size:var(--colab-chrome-font-size);line-height:1.24;font-weight:400;padding:7px 0 10px 5px;margin:0}h1,h2,h3,h4,h5,h6{color:var(--colab-primary-text-color);font-family:var(--colab-chrome-font-family);font-weight:700;margin-bottom:4px}p,ul{margin-bottom:6px;margin-top:6px}pre{margin-bottom:0px;margin-top:0px}a{color:var(--colab-anchor-color)}div.stream,div.execute_result,div.output_text,div.output_text pre{display:inline}div.output_latex,div.output_markdown{max-width:1016px}table.dataframe{border-collapse:collapse;border-spacing:0;border:none;table-layout:fixed}table.dataframe thead{border-bottom:1px solid var(--colab-border-color);font-family:var(--colab-code-font-family);text-align:right}table.dataframe tr,table.dataframe th,table.dataframe td{border:none;padding:0.5em;white-space:normal}table.dataframe th{font-weight:bold}table.dataframe th.col_heading{text-align:right}table.dataframe tbody tr:nth-child(odd){background:var(--colab-secondary-surface-color)}table.dataframe tbody tr:hover,table.dataframe tbody tr:nth-child(odd):hover{background-color:var(--colab-highlighted-surface-color)}table.dataframe td{text-align:right}table.dataTable input.text_filter{width:95%}table.dataTable th{text-align:left}.output_image>img{background-color:white;max-width:100%;vertical-align:bottom}.output_image>img.unconstrained{max-width:unset}.ansibold{font-weight:bold}.ansiblack{color:black}.ansired{color:darkred}.ansigreen{color:darkgreen}.ansiyellow{color:brown}.ansiblue{color:darkblue}.ansipurple{color:darkviolet}.ansicyan{color:steelblue}.ansigray{color:gray}.ansibgblack{background-color:black}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:yellow}.ansibgblue{background-color:blue}.ansibgpurple{background-color:magenta}.ansibgcyan{background-color:cyan}.ansibggray{background-color:gray}.output-error span{font-weight:normal!important}.output-error pre{white-space:pre-wrap}input.raw_input{font-family:var(--colab-code-font-family);width:90%}input{background:var(--colab-primary-surface-color);border:1px solid var(--colab-bold-border-color);color:var(--colab-primary-text-color)}#output-area{display:flow-root}#output-area button.colab{background-color:var(--colab-secondary-surface-color);border:0;box-shadow:var(--box-shadow-elevation-3dp);color:var(--colab-primary-text-color);font-family:var(--colab-chrome-font-family);font-size:11px;margin:0px 4px;padding:6px;text-transform:uppercase;user-select:none}#output-area button.colab:hover{background-color:var(--colab-highlighted-surface-color);cursor:pointer}#output-area .output-error button.error-details{background-color:#42a5f5;color:white}#output-area .output-error button.error-details:hover{background-color:#2196f3}#output-area .stdin-widget{align-items:center;display:inline;font-family:var(--colab-code-font-family);margin-right:10px;margin-top:10px;min-width:250px;padding:1px}#output-area .stdin-widget-hidden{visibility:hidden}.error .collapsed .extraneous{display:none}.error .error-expander{align-items:center;cursor:pointer;display:flex}.error .error-expander hr{border:0;border-top:1px solid var(--colab-bold-border-color);flex-grow:1;height:1px;margin:0 10px;padding:0}.error .error-expander hr:first-child{max-width:240px}.error .error-expander svg{fill:var(--colab-icon-color);height:24px;stroke:var(--colab-icon-color);width:24px}.lm-Widget.lm-mod-hidden{display:none!important}audio:focus{outline:none}.string-repr{display:inline}.string-repr .quote{opacity:75%;user-select:none}.string-repr pre{display:inline;white-space:pre-wrap;word-break:break-all}.string-repr button{color:var(--colab-primary-text-color);cursor:pointer;border:1px solid rgb(118,118,118);border-radius:2px;outline:none}.string-repr button.copy{background:transparent;border:none;margin-left:4px;opacity:0;padding:0;stroke:var(--colab-primary-text-color);transition:opacity 200ms}.string-repr button.copy svg{width:14px}.string-repr.hover button.copy,.string-repr:hover button.copy{opacity:1}.string-repr button.more{background-color:transparent;border-color:transparent;display:none;padding:0;transition:background-color 200ms,border-color 200ms}.string-repr.large button.more{display:inline}.string-repr.large.truncated button .collapse{display:none}.string-repr.large button .expand{display:none}.string-repr.large.truncated button .expand{display:inline}.string-repr.hover button.more,.string-repr:hover button.more{border-color:rgb(118,118,118)}html{--colab-anchor-color:#00e;--colab-callout-color:var(--paper-blue-700);--colab-primary-text-color:var(--paper-grey-900);--colab-primary-surface-color:var(--paper-white);--colab-secondary-surface-color:#f7f7f7;--colab-highlighted-surface-color:var(--paper-grey-300);--colab-border-color:#dadada;--colab-bold-border-color:#111;--colab-icon-color:#616161;--ansi-black:rgb(0,0,0);--ansi-red:rgb(139,0,0);--ansi-green:rgb(0,100,0);--ansi-yellow:rgb(205,205,0);--ansi-blue:rgb(0,0,238);--ansi-magenta:rgb(205,0,205);--ansi-cyan:rgb(70,130,180);--ansi-gray:rgb(229,229,229);--ansi-bright-black:rgb(127,127,127);--ansi-bright-red:rgb(255,0,0);--ansi-bright-green:rgb(0,208,0);--ansi-bright-yellow:rgb(255,255,0);--ansi-bright-blue:rgb(92,92,255);--ansi-bright-magenta:rgb(255,0,255);--ansi-bright-cyan:rgb(0,255,255);--ansi-bright-gray:rgb(255,255,255);--colab-code-font-family:monospace;--colab-chrome-font-family:'Roboto','Noto',sans-serif;--colab-chrome-font-size:14px}html[theme=dark]{--colab-anchor-color:var(--paper-blue-400);--colab-callout-color:var(--paper-blue-900);--colab-primary-text-color:#d5d5d5;--colab-primary-surface-color:#383838;--colab-secondary-surface-color:#454545;--colab-highlighted-surface-color:#525252;--colab-border-color:var(--paper-grey-900);--colab-bold-border-color:#eee;--colab-icon-color:#f5f5f5;--ansi-black:rgb(63,63,63);--ansi-red:rgb(255,122,136);--ansi-green:rgb(87,187,138);--ansi-yellow:rgb(255,255,102);--ansi-blue:rgb(130,177,255);--ansi-magenta:rgb(205,0,205);--ansi-cyan:rgb(153,187,215);--ansi-gray:rgb(229,229,229);--ansi-bright-green:rgb(0,255,0);--light-theme-secondary-color:var(--colab-input-placeholder-color)}html[editor=synthwave84]{--colab-anchor-color:#f97e72;--colab-primary-surface-color:#241b2f;--colab-secondary-surface-color:#49549539;--colab-highlighted-surface-color:#372d4b;--colab-border-color:#34294fb3;--ansi-red:#fe4450;--ansi-green:#72f1b8;--ansi-yellow:#f97e72;--ansi-blue:#03edf9;--ansi-magenta:#ff7edb;--ansi-cyan:#03edf9;--ansi-bright-red:#fe4450;--ansi-bright-green:#72f1b8;--ansi-bright-yellow:#fede5d;--ansi-bright-blue:#03edf9;--ansi-bright-magenta:#ff7edb;--ansi-bright-cyan:#03edf9}
+//@ sourceURL=https://colab.research.google.com/v2/external/outputframe.css?vrz=colab-20220512-060046-RC00_447973966</style><!--<base href="https://localhost:8080/">--><base href="."></head><body><div id="output-area"><span id="output-header"> </span><div id="output-body"><div class="stream output-id-200"><div class="output_subarea output_text"><pre>Collecting gym==0.21
+  Downloading gym-0.21.0.tar.gz (1.5 MB)
+     |████████████████████████████████| 1.5 MB 5.6 MB/s 
+Collecting stable-baselines3[docs,extra,tests]&gt;=1.5.0
+  Downloading stable_baselines3-1.5.0-py3-none-any.whl (177 kB)
+     |████████████████████████████████| 177 kB 40.7 MB/s 
+Collecting sb3-contrib&gt;=1.5.0
+  Downloading sb3_contrib-1.5.0-py3-none-any.whl (62 kB)
+     |████████████████████████████████| 62 kB 991 kB/s 
+Collecting box2d-py==2.3.8
+  Downloading box2d_py-2.3.8-cp37-cp37m-manylinux1_x86_64.whl (448 kB)
+     |████████████████████████████████| 448 kB 46.6 MB/s 
+Collecting pybullet
+  Downloading pybullet-3.2.4-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (91.7 MB)
+     |████████████████████████████████| 91.7 MB 113 kB/s 
+Collecting gym-minigrid
+  Downloading gym_minigrid-1.0.3-py3-none-any.whl (48 kB)
+     |████████████████████████████████| 48 kB 3.7 MB/s 
+Collecting scikit-optimize
+  Downloading scikit_optimize-0.9.0-py2.py3-none-any.whl (100 kB)
+     |████████████████████████████████| 100 kB 9.8 MB/s 
+Collecting optuna
+  Downloading optuna-2.10.0-py3-none-any.whl (308 kB)
+     |████████████████████████████████| 308 kB 48.4 MB/s 
+Collecting pytablewriter
+  Downloading pytablewriter-0.64.2-py3-none-any.whl (106 kB)
+     |████████████████████████████████| 106 kB 46.5 MB/s 
+Requirement already satisfied: seaborn in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 10)) (0.11.2)
+Collecting pyyaml&gt;=5.1
+  Downloading PyYAML-6.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (596 kB)
+     |████████████████████████████████| 596 kB 46.2 MB/s 
+Collecting cloudpickle&gt;=1.5.0
+  Downloading cloudpickle-2.0.0-py3-none-any.whl (25 kB)
+Requirement already satisfied: plotly in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 13)) (5.5.0)
+Collecting panda-gym==1.1.1
+  Downloading panda_gym-1.1.1-py3-none-any.whl (21 kB)
+Collecting rliable&gt;=1.0.5
+  Downloading rliable-1.0.7-py3-none-any.whl (19 kB)
+Collecting wandb
+  Downloading wandb-0.12.16-py2.py3-none-any.whl (1.8 MB)
+     |████████████████████████████████| 1.8 MB 27.1 MB/s 
+Collecting ale-py==0.7.4
+  Downloading ale_py-0.7.4-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+     |████████████████████████████████| 1.6 MB 38.3 MB/s 
+Requirement already satisfied: numpy&gt;=1.18.0 in /usr/local/lib/python3.7/dist-packages (from gym==0.21-&gt;-r requirements.txt (line 1)) (1.21.6)
+Requirement already satisfied: importlib_metadata&gt;=4.8.1 in /usr/local/lib/python3.7/dist-packages (from gym==0.21-&gt;-r requirements.txt (line 1)) (4.11.3)
+Requirement already satisfied: importlib-resources in /usr/local/lib/python3.7/dist-packages (from ale-py==0.7.4-&gt;-r requirements.txt (line 17)) (5.7.1)
+Requirement already satisfied: torch&gt;=1.8.1 in /usr/local/lib/python3.7/dist-packages (from stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.11.0+cu113)
+Requirement already satisfied: pandas in /usr/local/lib/python3.7/dist-packages (from stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.3.5)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.7/dist-packages (from stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (3.2.2)
+Requirement already satisfied: absl-py&gt;=0.9.0 in /usr/local/lib/python3.7/dist-packages (from rliable&gt;=1.0.5-&gt;-r requirements.txt (line 15)) (1.0.0)
+Collecting arch==5.0.1
+  Downloading arch-5.0.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (899 kB)
+     |████████████████████████████████| 899 kB 42.1 MB/s 
+Collecting scipy&gt;=1.7.0
+  Downloading scipy-1.7.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (38.1 MB)
+     |████████████████████████████████| 38.1 MB 1.3 MB/s 
+Collecting statsmodels&gt;=0.11
+  Downloading statsmodels-0.13.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.8 MB)
+     |████████████████████████████████| 9.8 MB 32.3 MB/s 
+Collecting property-cached&gt;=1.6.4
+  Downloading property_cached-1.6.4-py2.py3-none-any.whl (7.8 kB)
+Requirement already satisfied: six in /usr/local/lib/python3.7/dist-packages (from absl-py&gt;=0.9.0-&gt;rliable&gt;=1.0.5-&gt;-r requirements.txt (line 15)) (1.15.0)
+Requirement already satisfied: typing-extensions&gt;=3.6.4 in /usr/local/lib/python3.7/dist-packages (from importlib_metadata&gt;=4.8.1-&gt;gym==0.21-&gt;-r requirements.txt (line 1)) (4.2.0)
+Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib_metadata&gt;=4.8.1-&gt;gym==0.21-&gt;-r requirements.txt (line 1)) (3.8.0)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.8.2)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (3.0.8)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.11.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.7/dist-packages (from matplotlib-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.4.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2022.1)
+Requirement already satisfied: pytest in /usr/local/lib/python3.7/dist-packages (from stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (3.6.4)
+Collecting isort&gt;=5.0
+  Downloading isort-5.10.1-py3-none-any.whl (103 kB)
+     |████████████████████████████████| 103 kB 51.9 MB/s 
+Collecting pytype
+  Downloading pytype-2022.5.10-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 37.8 MB/s 
+Collecting pytest-cov
+  Downloading pytest_cov-3.0.0-py3-none-any.whl (20 kB)
+Collecting flake8&gt;=3.8
+  Downloading flake8-4.0.1-py2.py3-none-any.whl (64 kB)
+     |████████████████████████████████| 64 kB 2.5 MB/s 
+Collecting flake8-bugbear
+  Downloading flake8_bugbear-22.4.25-py3-none-any.whl (19 kB)
+Collecting black
+  Downloading black-22.3.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.4 MB)
+     |████████████████████████████████| 1.4 MB 37.4 MB/s 
+Collecting pytest-xdist
+  Downloading pytest_xdist-2.5.0-py3-none-any.whl (41 kB)
+     |████████████████████████████████| 41 kB 592 kB/s 
+Collecting pytest-env
+  Downloading pytest-env-0.6.2.tar.gz (1.7 kB)
+Requirement already satisfied: psutil in /usr/local/lib/python3.7/dist-packages (from stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (5.4.8)
+Requirement already satisfied: tensorboard&gt;=2.2.0 in /usr/local/lib/python3.7/dist-packages (from stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.8.0)
+Collecting autorom[accept-rom-license]~=0.4.2
+  Downloading AutoROM-0.4.2-py3-none-any.whl (16 kB)
+Requirement already satisfied: pillow in /usr/local/lib/python3.7/dist-packages (from stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (7.1.2)
+Requirement already satisfied: opencv-python in /usr/local/lib/python3.7/dist-packages (from stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (4.1.2.30)
+Collecting sphinx-autodoc-typehints
+  Downloading sphinx_autodoc_typehints-1.18.1-py3-none-any.whl (12 kB)
+Collecting sphinx-autobuild
+  Downloading sphinx_autobuild-2021.3.14-py3-none-any.whl (9.9 kB)
+Collecting sphinx-rtd-theme
+  Downloading sphinx_rtd_theme-1.0.0-py2.py3-none-any.whl (2.8 MB)
+     |████████████████████████████████| 2.8 MB 32.3 MB/s 
+Collecting sphinxcontrib.spelling
+  Downloading sphinxcontrib_spelling-7.3.3-py3-none-any.whl (15 kB)
+Requirement already satisfied: sphinx in /usr/local/lib/python3.7/dist-packages (from stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.8.6)
+Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from autorom[accept-rom-license]~=0.4.2-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.23.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from autorom[accept-rom-license]~=0.4.2-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (4.64.0)
+Requirement already satisfied: click in /usr/local/lib/python3.7/dist-packages (from autorom[accept-rom-license]~=0.4.2-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (7.1.2)
+Collecting AutoROM.accept-rom-license
+  Downloading AutoROM.accept-rom-license-0.4.2.tar.gz (9.8 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+    Preparing wheel metadata ... done
+Collecting mccabe&lt;0.7.0,&gt;=0.6.0
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting pycodestyle&lt;2.9.0,&gt;=2.8.0
+  Downloading pycodestyle-2.8.0-py2.py3-none-any.whl (42 kB)
+     |████████████████████████████████| 42 kB 897 kB/s 
+Collecting flake8&gt;=3.8
+  Downloading flake8-4.0.0-py2.py3-none-any.whl (64 kB)
+     |████████████████████████████████| 64 kB 2.7 MB/s 
+  Downloading flake8-3.9.2-py2.py3-none-any.whl (73 kB)
+     |████████████████████████████████| 73 kB 1.5 MB/s 
+Collecting pycodestyle&lt;2.8.0,&gt;=2.7.0
+  Downloading pycodestyle-2.7.0-py2.py3-none-any.whl (41 kB)
+     |████████████████████████████████| 41 kB 579 kB/s 
+Collecting pyflakes&lt;2.4.0,&gt;=2.3.0
+  Downloading pyflakes-2.3.1-py2.py3-none-any.whl (68 kB)
+     |████████████████████████████████| 68 kB 6.8 MB/s 
+Requirement already satisfied: patsy&gt;=0.5.2 in /usr/local/lib/python3.7/dist-packages (from statsmodels&gt;=0.11-&gt;arch==5.0.1-&gt;rliable&gt;=1.0.5-&gt;-r requirements.txt (line 15)) (0.5.2)
+Requirement already satisfied: packaging&gt;=21.3 in /usr/local/lib/python3.7/dist-packages (from statsmodels&gt;=0.11-&gt;arch==5.0.1-&gt;rliable&gt;=1.0.5-&gt;-r requirements.txt (line 15)) (21.3)
+Requirement already satisfied: wheel&gt;=0.26 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.37.1)
+Requirement already satisfied: markdown&gt;=2.6.8 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (3.3.6)
+Requirement already satisfied: grpcio&gt;=1.24.3 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.44.0)
+Requirement already satisfied: setuptools&gt;=41.0.0 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (57.4.0)
+Requirement already satisfied: protobuf&gt;=3.6.0 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (3.17.3)
+Requirement already satisfied: werkzeug&gt;=0.11.15 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.0.1)
+Requirement already satisfied: tensorboard-data-server&lt;0.7.0,&gt;=0.6.0 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.6.1)
+Requirement already satisfied: tensorboard-plugin-wit&gt;=1.6.0 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.8.1)
+Requirement already satisfied: google-auth-oauthlib&lt;0.5,&gt;=0.4.1 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.4.6)
+Requirement already satisfied: google-auth&lt;3,&gt;=1.6.3 in /usr/local/lib/python3.7/dist-packages (from tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.35.0)
+Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in /usr/local/lib/python3.7/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.2.8)
+Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /usr/local/lib/python3.7/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (4.8)
+Requirement already satisfied: cachetools&lt;5.0,&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (4.2.4)
+Requirement already satisfied: requests-oauthlib&gt;=0.7.0 in /usr/local/lib/python3.7/dist-packages (from google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.3.1)
+Requirement already satisfied: pyasn1&lt;0.5.0,&gt;=0.4.6 in /usr/local/lib/python3.7/dist-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.4.8)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;autorom[accept-rom-license]~=0.4.2-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.10)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;autorom[accept-rom-license]~=0.4.2-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2021.10.8)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;autorom[accept-rom-license]~=0.4.2-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.24.3)
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;autorom[accept-rom-license]~=0.4.2-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (3.0.4)
+Requirement already satisfied: oauthlib&gt;=3.0.0 in /usr/local/lib/python3.7/dist-packages (from requests-oauthlib&gt;=0.7.0-&gt;google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard&gt;=2.2.0-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (3.2.0)
+Requirement already satisfied: scikit-learn&gt;=0.20.0 in /usr/local/lib/python3.7/dist-packages (from scikit-optimize-&gt;-r requirements.txt (line 7)) (1.0.2)
+Collecting pyaml&gt;=16.9
+  Downloading pyaml-21.10.1-py2.py3-none-any.whl (24 kB)
+Requirement already satisfied: joblib&gt;=0.11 in /usr/local/lib/python3.7/dist-packages (from scikit-optimize-&gt;-r requirements.txt (line 7)) (1.1.0)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from scikit-learn&gt;=0.20.0-&gt;scikit-optimize-&gt;-r requirements.txt (line 7)) (3.1.0)
+Collecting colorlog
+  Downloading colorlog-6.6.0-py2.py3-none-any.whl (11 kB)
+Collecting cliff
+  Downloading cliff-3.10.1-py3-none-any.whl (81 kB)
+     |████████████████████████████████| 81 kB 8.9 MB/s 
+Collecting cmaes&gt;=0.8.2
+  Downloading cmaes-0.8.2-py3-none-any.whl (15 kB)
+Collecting alembic
+  Downloading alembic-1.7.7-py3-none-any.whl (210 kB)
+     |████████████████████████████████| 210 kB 48.4 MB/s 
+Requirement already satisfied: sqlalchemy&gt;=1.1.0 in /usr/local/lib/python3.7/dist-packages (from optuna-&gt;-r requirements.txt (line 8)) (1.4.36)
+Requirement already satisfied: greenlet!=0.4.17 in /usr/local/lib/python3.7/dist-packages (from sqlalchemy&gt;=1.1.0-&gt;optuna-&gt;-r requirements.txt (line 8)) (1.1.2)
+Collecting DataProperty&lt;2,&gt;=0.55.0
+  Downloading DataProperty-0.55.0-py3-none-any.whl (26 kB)
+Collecting mbstrdecoder&lt;2,&gt;=1.0.0
+  Downloading mbstrdecoder-1.1.0-py3-none-any.whl (7.8 kB)
+Collecting tcolorpy&lt;1,&gt;=0.0.5
+  Downloading tcolorpy-0.1.2-py3-none-any.whl (7.9 kB)
+Collecting typepy[datetime]&lt;2,&gt;=1.2.0
+  Downloading typepy-1.3.0-py3-none-any.whl (31 kB)
+Collecting pathvalidate&lt;3,&gt;=2.3.0
+  Downloading pathvalidate-2.5.0-py3-none-any.whl (19 kB)
+Collecting tabledata&lt;2,&gt;=1.3.0
+  Downloading tabledata-1.3.0-py3-none-any.whl (11 kB)
+Requirement already satisfied: tenacity&gt;=6.2.0 in /usr/local/lib/python3.7/dist-packages (from plotly-&gt;-r requirements.txt (line 13)) (8.0.1)
+Collecting GitPython&gt;=1.0.0
+  Downloading GitPython-3.1.27-py3-none-any.whl (181 kB)
+     |████████████████████████████████| 181 kB 45.6 MB/s 
+Collecting setproctitle
+  Downloading setproctitle-1.2.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29 kB)
+Collecting sentry-sdk&gt;=1.0.0
+  Downloading sentry_sdk-1.5.12-py2.py3-none-any.whl (145 kB)
+     |████████████████████████████████| 145 kB 44.6 MB/s 
+Collecting shortuuid&gt;=0.5.0
+  Downloading shortuuid-1.0.9-py3-none-any.whl (9.4 kB)
+Collecting docker-pycreds&gt;=0.4.0
+  Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Collecting pathtools
+  Downloading pathtools-0.1.2.tar.gz (11 kB)
+Requirement already satisfied: promise&lt;3,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from wandb-&gt;-r requirements.txt (line 16)) (2.3)
+Collecting gitdb&lt;5,&gt;=4.0.1
+  Downloading gitdb-4.0.9-py3-none-any.whl (63 kB)
+     |████████████████████████████████| 63 kB 1.6 MB/s 
+Collecting smmap&lt;6,&gt;=3.0.1
+  Downloading smmap-5.0.0-py3-none-any.whl (24 kB)
+Collecting Mako
+  Downloading Mako-1.2.0-py3-none-any.whl (78 kB)
+     |████████████████████████████████| 78 kB 7.6 MB/s 
+Collecting click
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting platformdirs&gt;=2
+  Downloading platformdirs-2.5.2-py3-none-any.whl (14 kB)
+Collecting pathspec&gt;=0.9.0
+  Downloading pathspec-0.9.0-py2.py3-none-any.whl (31 kB)
+Requirement already satisfied: tomli&gt;=1.1.0 in /usr/local/lib/python3.7/dist-packages (from black-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.0.1)
+Collecting typed-ast&gt;=1.4.2
+  Downloading typed_ast-1.5.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (843 kB)
+     |████████████████████████████████| 843 kB 41.9 MB/s 
+Collecting mypy-extensions&gt;=0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Collecting stevedore&gt;=2.0.1
+  Downloading stevedore-3.5.0-py3-none-any.whl (49 kB)
+     |████████████████████████████████| 49 kB 5.4 MB/s 
+Collecting pbr!=2.1.0,&gt;=2.0.0
+  Downloading pbr-5.9.0-py2.py3-none-any.whl (112 kB)
+     |████████████████████████████████| 112 kB 46.0 MB/s 
+Collecting autopage&gt;=0.4.0
+  Downloading autopage-0.5.0-py3-none-any.whl (29 kB)
+Requirement already satisfied: PrettyTable&gt;=0.7.2 in /usr/local/lib/python3.7/dist-packages (from cliff-&gt;optuna-&gt;-r requirements.txt (line 8)) (3.2.0)
+Collecting cmd2&gt;=1.0.0
+  Downloading cmd2-2.4.1-py3-none-any.whl (146 kB)
+     |████████████████████████████████| 146 kB 53.0 MB/s 
+Requirement already satisfied: wcwidth&gt;=0.1.7 in /usr/local/lib/python3.7/dist-packages (from cmd2&gt;=1.0.0-&gt;cliff-&gt;optuna-&gt;-r requirements.txt (line 8)) (0.2.5)
+Collecting pyperclip&gt;=1.6
+  Downloading pyperclip-1.8.2.tar.gz (20 kB)
+Requirement already satisfied: attrs&gt;=16.3.0 in /usr/local/lib/python3.7/dist-packages (from cmd2&gt;=1.0.0-&gt;cliff-&gt;optuna-&gt;-r requirements.txt (line 8)) (21.4.0)
+Requirement already satisfied: MarkupSafe&gt;=0.9.2 in /usr/local/lib/python3.7/dist-packages (from Mako-&gt;alembic-&gt;optuna-&gt;-r requirements.txt (line 8)) (2.0.1)
+Requirement already satisfied: pluggy&lt;0.8,&gt;=0.5 in /usr/local/lib/python3.7/dist-packages (from pytest-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.7.1)
+Requirement already satisfied: more-itertools&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from pytest-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (8.12.0)
+Requirement already satisfied: atomicwrites&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from pytest-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.4.0)
+Requirement already satisfied: py&gt;=1.5.0 in /usr/local/lib/python3.7/dist-packages (from pytest-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.11.0)
+Collecting pytest
+  Downloading pytest-7.1.2-py3-none-any.whl (297 kB)
+     |████████████████████████████████| 297 kB 37.6 MB/s 
+Collecting coverage[toml]&gt;=5.2.1
+  Downloading coverage-6.3.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (207 kB)
+     |████████████████████████████████| 207 kB 48.0 MB/s 
+Collecting pytest
+  Downloading pytest-7.1.1-py3-none-any.whl (297 kB)
+     |████████████████████████████████| 297 kB 46.2 MB/s 
+  Downloading pytest-7.1.0-py3-none-any.whl (297 kB)
+     |████████████████████████████████| 297 kB 32.2 MB/s 
+  Downloading pytest-7.0.1-py3-none-any.whl (296 kB)
+     |████████████████████████████████| 296 kB 49.8 MB/s 
+  Downloading pytest-7.0.0-py3-none-any.whl (296 kB)
+     |████████████████████████████████| 296 kB 48.6 MB/s 
+  Downloading pytest-6.2.5-py3-none-any.whl (280 kB)
+     |████████████████████████████████| 280 kB 47.9 MB/s 
+  Downloading pytest-6.2.4-py3-none-any.whl (280 kB)
+     |████████████████████████████████| 280 kB 45.3 MB/s 
+  Downloading pytest-6.2.3-py3-none-any.whl (280 kB)
+     |████████████████████████████████| 280 kB 45.4 MB/s 
+  Downloading pytest-6.2.2-py3-none-any.whl (280 kB)
+     |████████████████████████████████| 280 kB 45.8 MB/s 
+  Downloading pytest-6.2.1-py3-none-any.whl (279 kB)
+     |████████████████████████████████| 279 kB 50.6 MB/s 
+  Downloading pytest-6.2.0-py3-none-any.whl (279 kB)
+     |████████████████████████████████| 279 kB 43.1 MB/s 
+  Downloading pytest-6.1.2-py3-none-any.whl (272 kB)
+     |████████████████████████████████| 272 kB 47.2 MB/s 
+  Downloading pytest-6.1.1-py3-none-any.whl (272 kB)
+     |████████████████████████████████| 272 kB 48.4 MB/s 
+  Downloading pytest-6.1.0-py3-none-any.whl (272 kB)
+     |████████████████████████████████| 272 kB 49.4 MB/s 
+  Downloading pytest-6.0.2-py3-none-any.whl (270 kB)
+     |████████████████████████████████| 270 kB 49.5 MB/s 
+  Downloading pytest-6.0.1-py3-none-any.whl (270 kB)
+     |████████████████████████████████| 270 kB 51.0 MB/s 
+  Downloading pytest-6.0.0-py3-none-any.whl (270 kB)
+     |████████████████████████████████| 270 kB 45.2 MB/s 
+  Downloading pytest-5.4.3-py3-none-any.whl (248 kB)
+     |████████████████████████████████| 248 kB 48.5 MB/s 
+  Downloading pytest-5.4.2-py3-none-any.whl (247 kB)
+     |████████████████████████████████| 247 kB 51.0 MB/s 
+  Downloading pytest-5.4.1-py3-none-any.whl (246 kB)
+     |████████████████████████████████| 246 kB 48.1 MB/s 
+  Downloading pytest-5.4.0-py3-none-any.whl (247 kB)
+     |████████████████████████████████| 247 kB 50.4 MB/s 
+  Downloading pytest-5.3.5-py3-none-any.whl (235 kB)
+     |████████████████████████████████| 235 kB 47.3 MB/s 
+  Downloading pytest-5.3.4-py3-none-any.whl (235 kB)
+     |████████████████████████████████| 235 kB 47.9 MB/s 
+  Downloading pytest-5.3.3-py3-none-any.whl (235 kB)
+     |████████████████████████████████| 235 kB 52.9 MB/s 
+  Downloading pytest-5.3.2-py3-none-any.whl (234 kB)
+     |████████████████████████████████| 234 kB 52.8 MB/s 
+  Downloading pytest-5.3.1-py3-none-any.whl (233 kB)
+     |████████████████████████████████| 233 kB 37.8 MB/s 
+  Downloading pytest-5.3.0-py3-none-any.whl (233 kB)
+     |████████████████████████████████| 233 kB 46.6 MB/s 
+  Downloading pytest-5.2.4-py3-none-any.whl (227 kB)
+     |████████████████████████████████| 227 kB 47.0 MB/s 
+  Downloading pytest-5.2.3-py3-none-any.whl (227 kB)
+     |████████████████████████████████| 227 kB 49.2 MB/s 
+  Downloading pytest-5.2.2-py3-none-any.whl (227 kB)
+     |████████████████████████████████| 227 kB 49.9 MB/s 
+  Downloading pytest-5.2.1-py3-none-any.whl (226 kB)
+     |████████████████████████████████| 226 kB 47.7 MB/s 
+  Downloading pytest-5.2.0-py3-none-any.whl (226 kB)
+     |████████████████████████████████| 226 kB 41.4 MB/s 
+  Downloading pytest-5.1.3-py3-none-any.whl (224 kB)
+     |████████████████████████████████| 224 kB 47.6 MB/s 
+  Downloading pytest-5.1.2-py3-none-any.whl (224 kB)
+     |████████████████████████████████| 224 kB 47.4 MB/s 
+  Downloading pytest-5.1.1-py3-none-any.whl (223 kB)
+     |████████████████████████████████| 223 kB 47.7 MB/s 
+  Downloading pytest-5.1.0-py3-none-any.whl (223 kB)
+     |████████████████████████████████| 223 kB 48.7 MB/s 
+  Downloading pytest-5.0.1-py3-none-any.whl (221 kB)
+     |████████████████████████████████| 221 kB 46.8 MB/s 
+  Downloading pytest-5.0.0-py3-none-any.whl (221 kB)
+     |████████████████████████████████| 221 kB 49.5 MB/s 
+  Downloading pytest-4.6.11-py2.py3-none-any.whl (231 kB)
+     |████████████████████████████████| 231 kB 35.4 MB/s 
+  Downloading pytest-4.6.10-py2.py3-none-any.whl (231 kB)
+     |████████████████████████████████| 231 kB 51.7 MB/s 
+  Downloading pytest-4.6.9-py2.py3-none-any.whl (231 kB)
+     |████████████████████████████████| 231 kB 46.7 MB/s 
+  Downloading pytest-4.6.8-py2.py3-none-any.whl (230 kB)
+     |████████████████████████████████| 230 kB 48.3 MB/s 
+  Downloading pytest-4.6.7-py2.py3-none-any.whl (230 kB)
+     |████████████████████████████████| 230 kB 51.9 MB/s 
+  Downloading pytest-4.6.6-py2.py3-none-any.whl (230 kB)
+     |████████████████████████████████| 230 kB 51.1 MB/s 
+  Downloading pytest-4.6.5-py2.py3-none-any.whl (230 kB)
+     |████████████████████████████████| 230 kB 49.5 MB/s 
+  Downloading pytest-4.6.4-py2.py3-none-any.whl (229 kB)
+     |████████████████████████████████| 229 kB 43.5 MB/s 
+  Downloading pytest-4.6.3-py2.py3-none-any.whl (229 kB)
+     |████████████████████████████████| 229 kB 43.5 MB/s 
+  Downloading pytest-4.6.2-py2.py3-none-any.whl (229 kB)
+     |████████████████████████████████| 229 kB 47.6 MB/s 
+  Downloading pytest-4.6.1-py2.py3-none-any.whl (229 kB)
+     |████████████████████████████████| 229 kB 46.1 MB/s 
+  Downloading pytest-4.6.0-py2.py3-none-any.whl (229 kB)
+     |████████████████████████████████| 229 kB 45.0 MB/s 
+INFO: pip is looking at multiple versions of coverage to determine which version is compatible with other requirements. This could take a while.
+INFO: pip is looking at multiple versions of coverage[toml] to determine which version is compatible with other requirements. This could take a while.
+Collecting coverage[toml]&gt;=5.2.1
+  Downloading coverage-6.3.2-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (207 kB)
+     |████████████████████████████████| 207 kB 49.7 MB/s 
+  Downloading coverage-6.3.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (207 kB)
+     |████████████████████████████████| 207 kB 47.4 MB/s 
+  Downloading coverage-6.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (207 kB)
+     |████████████████████████████████| 207 kB 47.9 MB/s 
+  Downloading coverage-6.2-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (213 kB)
+     |████████████████████████████████| 213 kB 49.5 MB/s 
+  Downloading coverage-6.1.2-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (213 kB)
+     |████████████████████████████████| 213 kB 48.4 MB/s 
+  Downloading coverage-6.1.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (213 kB)
+     |████████████████████████████████| 213 kB 44.3 MB/s 
+  Downloading coverage-6.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (213 kB)
+     |████████████████████████████████| 213 kB 48.0 MB/s 
+INFO: pip is looking at multiple versions of coverage to determine which version is compatible with other requirements. This could take a while.
+INFO: pip is looking at multiple versions of coverage[toml] to determine which version is compatible with other requirements. This could take a while.
+  Downloading coverage-6.0.2-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (253 kB)
+     |████████████████████████████████| 253 kB 50.8 MB/s 
+  Downloading coverage-6.0.1-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (252 kB)
+     |████████████████████████████████| 252 kB 51.8 MB/s 
+  Downloading coverage-6.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (252 kB)
+     |████████████████████████████████| 252 kB 46.6 MB/s 
+  Downloading coverage-5.5-cp37-cp37m-manylinux2010_x86_64.whl (242 kB)
+     |████████████████████████████████| 242 kB 47.1 MB/s 
+Collecting toml
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting coverage[toml]&gt;=5.2.1
+  Downloading coverage-5.4-cp37-cp37m-manylinux2010_x86_64.whl (242 kB)
+     |████████████████████████████████| 242 kB 51.3 MB/s 
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. If you want to abort this run, you can press Ctrl + C to do so. To improve how pip performs, tell us what happened here: <a rel="nofollow" target="_blank" href="https://pip.pypa.io/surveys/backtracking">https://pip.pypa.io/surveys/backtracking</a>
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. If you want to abort this run, you can press Ctrl + C to do so. To improve how pip performs, tell us what happened here: <a rel="nofollow" target="_blank" href="https://pip.pypa.io/surveys/backtracking">https://pip.pypa.io/surveys/backtracking</a>
+  Downloading coverage-5.3.1-cp37-cp37m-manylinux2010_x86_64.whl (242 kB)
+     |████████████████████████████████| 242 kB 47.5 MB/s 
+  Downloading coverage-5.3-cp37-cp37m-manylinux1_x86_64.whl (229 kB)
+     |████████████████████████████████| 229 kB 44.2 MB/s 
+  Downloading coverage-5.2.1-cp37-cp37m-manylinux1_x86_64.whl (229 kB)
+     |████████████████████████████████| 229 kB 48.4 MB/s 
+INFO: pip is looking at multiple versions of pytest-cov to determine which version is compatible with other requirements. This could take a while.
+Collecting pytest-cov
+  Downloading pytest_cov-2.12.1-py2.py3-none-any.whl (20 kB)
+  Downloading pytest_cov-2.12.0-py2.py3-none-any.whl (20 kB)
+  Downloading pytest_cov-2.11.1-py2.py3-none-any.whl (20 kB)
+  Downloading pytest_cov-2.11.0-py2.py3-none-any.whl (20 kB)
+  Downloading pytest_cov-2.10.1-py2.py3-none-any.whl (19 kB)
+Collecting coverage&gt;=4.4
+  Downloading coverage-5.2-cp37-cp37m-manylinux1_x86_64.whl (229 kB)
+     |████████████████████████████████| 229 kB 39.2 MB/s 
+  Downloading coverage-5.1-cp37-cp37m-manylinux1_x86_64.whl (227 kB)
+     |████████████████████████████████| 227 kB 41.7 MB/s 
+  Downloading coverage-5.0.4-cp37-cp37m-manylinux1_x86_64.whl (227 kB)
+     |████████████████████████████████| 227 kB 39.1 MB/s 
+  Downloading coverage-5.0.3-cp37-cp37m-manylinux1_x86_64.whl (227 kB)
+     |████████████████████████████████| 227 kB 48.9 MB/s 
+  Downloading coverage-5.0.2-cp37-cp37m-manylinux1_x86_64.whl (226 kB)
+     |████████████████████████████████| 226 kB 51.5 MB/s 
+  Downloading coverage-5.0.1-cp37-cp37m-manylinux1_x86_64.whl (226 kB)
+     |████████████████████████████████| 226 kB 46.5 MB/s 
+  Downloading coverage-5.0-cp37-cp37m-manylinux1_x86_64.whl (226 kB)
+     |████████████████████████████████| 226 kB 47.7 MB/s 
+  Downloading coverage-4.5.4-cp37-cp37m-manylinux1_x86_64.whl (205 kB)
+     |████████████████████████████████| 205 kB 45.2 MB/s 
+  Downloading coverage-4.5.3-cp37-cp37m-manylinux1_x86_64.whl (204 kB)
+     |████████████████████████████████| 204 kB 48.1 MB/s 
+  Downloading coverage-4.5.2-cp37-cp37m-manylinux1_x86_64.whl (205 kB)
+     |████████████████████████████████| 205 kB 46.6 MB/s 
+  Downloading coverage-4.5.1-cp37-cp37m-manylinux1_x86_64.whl (202 kB)
+     |████████████████████████████████| 202 kB 46.7 MB/s 
+  Downloading coverage-4.5.tar.gz (378 kB)
+     |████████████████████████████████| 378 kB 50.5 MB/s 
+  Downloading coverage-4.4.2.tar.gz (374 kB)
+     |████████████████████████████████| 374 kB 46.1 MB/s 
+  Downloading coverage-4.4.1.tar.gz (369 kB)
+     |████████████████████████████████| 369 kB 28.1 MB/s 
+  Downloading coverage-4.4.tar.gz (369 kB)
+     |████████████████████████████████| 369 kB 43.0 MB/s 
+Collecting pytest-cov
+  Downloading pytest_cov-2.10.0-py2.py3-none-any.whl (19 kB)
+  Downloading pytest_cov-2.9.0-py2.py3-none-any.whl (19 kB)
+Collecting execnet&gt;=1.1
+  Downloading execnet-1.9.0-py2.py3-none-any.whl (39 kB)
+Collecting pytest-forked
+  Downloading pytest_forked-1.4.0-py3-none-any.whl (4.9 kB)
+INFO: pip is looking at multiple versions of execnet to determine which version is compatible with other requirements. This could take a while.
+Collecting execnet&gt;=1.1
+  Downloading execnet-1.8.1-py2.py3-none-any.whl (39 kB)
+Collecting apipkg&gt;=1.4
+  Downloading apipkg-2.1.1-py2.py3-none-any.whl (7.1 kB)
+INFO: pip is looking at multiple versions of apipkg to determine which version is compatible with other requirements. This could take a while.
+  Downloading apipkg-2.0.1-py2.py3-none-any.whl (6.5 kB)
+  Downloading apipkg-2.0.0-py2.py3-none-any.whl (5.9 kB)
+  Downloading apipkg-1.5-py2.py3-none-any.whl (4.9 kB)
+  Downloading apipkg-1.4-py2.py3-none-any.whl (6.6 kB)
+Collecting execnet&gt;=1.1
+  Downloading execnet-1.8.0-py2.py3-none-any.whl (39 kB)
+INFO: pip is looking at multiple versions of apipkg to determine which version is compatible with other requirements. This could take a while.
+  Downloading execnet-1.7.1-py2.py3-none-any.whl (39 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. If you want to abort this run, you can press Ctrl + C to do so. To improve how pip performs, tell us what happened here: <a rel="nofollow" target="_blank" href="https://pip.pypa.io/surveys/backtracking">https://pip.pypa.io/surveys/backtracking</a>
+  Downloading execnet-1.7.0-py2.py3-none-any.whl (38 kB)
+  Downloading execnet-1.6.1-py2.py3-none-any.whl (38 kB)
+  Downloading execnet-1.6.0-py2.py3-none-any.whl (38 kB)
+  Downloading execnet-1.5.0-py2.py3-none-any.whl (39 kB)
+INFO: pip is looking at multiple versions of execnet to determine which version is compatible with other requirements. This could take a while.
+  Downloading execnet-1.4.1-py2.py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 4.7 MB/s 
+  Downloading execnet-1.4.0-py2.py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 4.9 MB/s 
+  Downloading execnet-1.3.0-py2.py3-none-any.whl (39 kB)
+  Downloading execnet-1.2.0.tar.gz (163 kB)
+     |████████████████████████████████| 163 kB 43.9 MB/s 
+  Downloading execnet-1.1.zip (324 kB)
+     |████████████████████████████████| 324 kB 39.3 MB/s 
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. If you want to abort this run, you can press Ctrl + C to do so. To improve how pip performs, tell us what happened here: <a rel="nofollow" target="_blank" href="https://pip.pypa.io/surveys/backtracking">https://pip.pypa.io/surveys/backtracking</a>
+INFO: pip is looking at multiple versions of pytest-xdist to determine which version is compatible with other requirements. This could take a while.
+Collecting pytest-xdist
+  Downloading pytest_xdist-2.4.0-py3-none-any.whl (38 kB)
+  Downloading pytest_xdist-2.3.0-py3-none-any.whl (37 kB)
+  Downloading pytest_xdist-2.2.1-py3-none-any.whl (37 kB)
+  Downloading pytest_xdist-2.2.0-py3-none-any.whl (36 kB)
+  Downloading pytest_xdist-2.1.0-py3-none-any.whl (36 kB)
+  Downloading pytest_xdist-2.0.0-py2.py3-none-any.whl (36 kB)
+  Downloading pytest_xdist-1.34.0-py2.py3-none-any.whl (36 kB)
+Collecting pytest
+  Downloading pytest-4.5.0-py2.py3-none-any.whl (227 kB)
+     |████████████████████████████████| 227 kB 44.5 MB/s 
+  Downloading pytest-4.4.2-py2.py3-none-any.whl (224 kB)
+     |████████████████████████████████| 224 kB 47.9 MB/s 
+  Downloading pytest-4.4.1-py2.py3-none-any.whl (223 kB)
+     |████████████████████████████████| 223 kB 47.5 MB/s 
+  Downloading pytest-4.4.0-py2.py3-none-any.whl (223 kB)
+     |████████████████████████████████| 223 kB 46.1 MB/s 
+INFO: pip is looking at multiple versions of pytest-xdist to determine which version is compatible with other requirements. This could take a while.
+Collecting pytest-xdist
+  Downloading pytest_xdist-1.33.0-py2.py3-none-any.whl (36 kB)
+  Downloading pytest_xdist-1.32.0-py2.py3-none-any.whl (36 kB)
+  Downloading pytest_xdist-1.31.0-py2.py3-none-any.whl (36 kB)
+  Downloading pytest_xdist-1.30.0-py2.py3-none-any.whl (35 kB)
+  Downloading pytest_xdist-1.29.0-py2.py3-none-any.whl (35 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. If you want to abort this run, you can press Ctrl + C to do so. To improve how pip performs, tell us what happened here: <a rel="nofollow" target="_blank" href="https://pip.pypa.io/surveys/backtracking">https://pip.pypa.io/surveys/backtracking</a>
+  Downloading pytest_xdist-1.28.0-py2.py3-none-any.whl (34 kB)
+  Downloading pytest_xdist-1.27.0-py2.py3-none-any.whl (35 kB)
+Collecting pytest
+  Downloading pytest-4.3.1-py2.py3-none-any.whl (219 kB)
+     |████████████████████████████████| 219 kB 47.6 MB/s 
+Requirement already satisfied: tabulate in /usr/local/lib/python3.7/dist-packages (from pytype-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.8.9)
+Collecting libcst
+  Downloading libcst-0.4.3-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.7 MB)
+     |████████████████████████████████| 2.7 MB 32.9 MB/s 
+Collecting ninja&gt;=1.10.0.post2
+  Downloading ninja-1.10.2.3-py2.py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.whl (108 kB)
+     |████████████████████████████████| 108 kB 43.5 MB/s 
+Collecting importlab&gt;=0.7
+  Downloading importlab-0.7.tar.gz (28 kB)
+Requirement already satisfied: networkx&gt;=2 in /usr/local/lib/python3.7/dist-packages (from importlab&gt;=0.7-&gt;pytype-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.6.3)
+Collecting typing-inspect&gt;=0.4.0
+  Downloading typing_inspect-0.7.1-py3-none-any.whl (8.4 kB)
+Requirement already satisfied: babel!=2.0,&gt;=1.3 in /usr/local/lib/python3.7/dist-packages (from sphinx-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.10.1)
+Requirement already satisfied: snowballstemmer&gt;=1.1 in /usr/local/lib/python3.7/dist-packages (from sphinx-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.2.0)
+Requirement already satisfied: Pygments&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from sphinx-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.6.1)
+Requirement already satisfied: Jinja2&gt;=2.3 in /usr/local/lib/python3.7/dist-packages (from sphinx-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (2.11.3)
+Requirement already satisfied: sphinxcontrib-websupport in /usr/local/lib/python3.7/dist-packages (from sphinx-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.2.4)
+Requirement already satisfied: alabaster&lt;0.8,&gt;=0.7 in /usr/local/lib/python3.7/dist-packages (from sphinx-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.7.12)
+Requirement already satisfied: imagesize in /usr/local/lib/python3.7/dist-packages (from sphinx-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.3.0)
+Requirement already satisfied: docutils&lt;0.18,&gt;=0.11 in /usr/local/lib/python3.7/dist-packages (from sphinx-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (0.17.1)
+Collecting livereload
+  Downloading livereload-2.6.3.tar.gz (25 kB)
+Collecting colorama
+  Downloading colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+Requirement already satisfied: tornado in /usr/local/lib/python3.7/dist-packages (from livereload-&gt;sphinx-autobuild-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (5.1.1)
+Collecting sphinx
+  Downloading Sphinx-4.5.0-py3-none-any.whl (3.1 MB)
+     |████████████████████████████████| 3.1 MB 30.1 MB/s 
+Collecting sphinxcontrib-devhelp
+  Downloading sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl (84 kB)
+     |████████████████████████████████| 84 kB 3.4 MB/s 
+Collecting sphinxcontrib-jsmath
+  Downloading sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+Collecting sphinxcontrib-applehelp
+  Downloading sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl (121 kB)
+     |████████████████████████████████| 121 kB 42.5 MB/s 
+Collecting sphinxcontrib-htmlhelp&gt;=2.0.0
+  Downloading sphinxcontrib_htmlhelp-2.0.0-py2.py3-none-any.whl (100 kB)
+     |████████████████████████████████| 100 kB 8.6 MB/s 
+Collecting sphinxcontrib-qthelp
+  Downloading sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl (90 kB)
+     |████████████████████████████████| 90 kB 8.9 MB/s 
+Requirement already satisfied: sphinxcontrib-serializinghtml&gt;=1.1.5 in /usr/local/lib/python3.7/dist-packages (from sphinx-&gt;stable-baselines3[docs,extra,tests]&gt;=1.5.0-&gt;-r requirements.txt (line 2)) (1.1.5)
+Collecting PyEnchant&gt;=3.1.1
+  Downloading pyenchant-3.2.2-py3-none-any.whl (55 kB)
+     |████████████████████████████████| 55 kB 3.9 MB/s 
+Building wheels for collected packages: gym, AutoROM.accept-rom-license, pyperclip, pathtools, pytest-env, importlab, livereload
+  Building wheel for gym (setup.py) ... done
+  Created wheel for gym: filename=gym-0.21.0-py3-none-any.whl size=1616826 sha256=5d64742d10d14868712374485787dc5089b89c8744539dc2cd2d15ff4f7a62e6
+  Stored in directory: /root/.cache/pip/wheels/76/ee/9c/36bfe3e079df99acf5ae57f4e3464ff2771b34447d6d2f2148
+  Building wheel for AutoROM.accept-rom-license (PEP 517) ... done
+  Created wheel for AutoROM.accept-rom-license: filename=AutoROM.accept_rom_license-0.4.2-py3-none-any.whl size=441027 sha256=9c109009ab58c0923d78e25f831f57a12eae84dba27bd1439345441156a59517
+  Stored in directory: /root/.cache/pip/wheels/87/67/2e/6147e7912fe37f5408b80d07527dab807c1d25f5c403a9538a
+  Building wheel for pyperclip (setup.py) ... done
+  Created wheel for pyperclip: filename=pyperclip-1.8.2-py3-none-any.whl size=11137 sha256=98596a05e490cf0ac1538438bd876aa589f547c6968a5f1cb1e1f39245bf986f
+  Stored in directory: /root/.cache/pip/wheels/9f/18/84/8f69f8b08169c7bae2dde6bd7daf0c19fca8c8e500ee620a28
+  Building wheel for pathtools (setup.py) ... done
+  Created wheel for pathtools: filename=pathtools-0.1.2-py3-none-any.whl size=8806 sha256=f8e2147f54c3bbdcc0eba3338f3cd9557bf21ffde878a79cc48a6d447379e308
+  Stored in directory: /root/.cache/pip/wheels/3e/31/09/fa59cef12cdcfecc627b3d24273699f390e71828921b2cbba2
+  Building wheel for pytest-env (setup.py) ... done
+  Created wheel for pytest-env: filename=pytest_env-0.6.2-py3-none-any.whl size=2373 sha256=61e9fe8f00aaa2f0268c8d964baaf4b6744ca7908cffa1cdb2203a947fcf71c7
+  Stored in directory: /root/.cache/pip/wheels/00/78/6f/8413b85149939cd491ef2c5d3c5422e49cb2f898c8402f81f7
+  Building wheel for importlab (setup.py) ... done
+  Created wheel for importlab: filename=importlab-0.7-py2.py3-none-any.whl size=21406 sha256=05d8577b73b74cf881b11d52c38d00371d80b49b44e3a9ab23088ecd6928f866
+  Stored in directory: /root/.cache/pip/wheels/6a/89/1f/532095f0c356c656b2f8d1571c638a01d25b15a51407bc4a0a
+  Building wheel for livereload (setup.py) ... done
+  Created wheel for livereload: filename=livereload-2.6.3-py2.py3-none-any.whl size=24724 sha256=b65faedf10de8c1d674f47684ac1d7168c4087bddd2ca1dc5183cec76153180f
+  Stored in directory: /root/.cache/pip/wheels/d4/f2/03/55f37093eb8cb0c89d7efb206f792dba55cd5bd67b1c5b1ce1
+Successfully built gym AutoROM.accept-rom-license pyperclip pathtools pytest-env importlab livereload
+Installing collected packages: mbstrdecoder, typepy, mypy-extensions, typing-inspect, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, smmap, scipy, pyyaml, pytest, pyperclip, pyflakes, pycodestyle, pbr, mccabe, cloudpickle, click, typed-ast, toml, stevedore, statsmodels, sphinx, pytest-forked, PyEnchant, property-cached, platformdirs, pathspec, ninja, Mako, livereload, libcst, importlab, gym, gitdb, flake8, execnet, DataProperty, coverage, colorama, cmd2, AutoROM.accept-rom-license, autorom, autopage, tcolorpy, tabledata, stable-baselines3, sphinxcontrib.spelling, sphinx-rtd-theme, sphinx-autodoc-typehints, sphinx-autobuild, shortuuid, setproctitle, sentry-sdk, pytype, pytest-xdist, pytest-env, pytest-cov, pybullet, pyaml, pathvalidate, pathtools, isort, GitPython, flake8-bugbear, docker-pycreds, colorlog, cmaes, cliff, black, arch, alembic, ale-py, wandb, scikit-optimize, sb3-contrib, rliable, pytablewriter, panda-gym, optuna, gym-minigrid, box2d-py
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.4.1
+    Uninstalling scipy-1.4.1:
+      Successfully uninstalled scipy-1.4.1
+  Attempting uninstall: pyyaml
+    Found existing installation: PyYAML 3.13
+    Uninstalling PyYAML-3.13:
+      Successfully uninstalled PyYAML-3.13
+  Attempting uninstall: pytest
+    Found existing installation: pytest 3.6.4
+    Uninstalling pytest-3.6.4:
+      Successfully uninstalled pytest-3.6.4
+  Attempting uninstall: cloudpickle
+    Found existing installation: cloudpickle 1.3.0
+    Uninstalling cloudpickle-1.3.0:
+      Successfully uninstalled cloudpickle-1.3.0
+  Attempting uninstall: click
+    Found existing installation: click 7.1.2
+    Uninstalling click-7.1.2:
+      Successfully uninstalled click-7.1.2
+  Attempting uninstall: statsmodels
+    Found existing installation: statsmodels 0.10.2
+    Uninstalling statsmodels-0.10.2:
+      Successfully uninstalled statsmodels-0.10.2
+  Attempting uninstall: sphinx
+    Found existing installation: Sphinx 1.8.6
+    Uninstalling Sphinx-1.8.6:
+      Successfully uninstalled Sphinx-1.8.6
+  Attempting uninstall: gym
+    Found existing installation: gym 0.17.3
+    Uninstalling gym-0.17.3:
+      Successfully uninstalled gym-0.17.3
+  Attempting uninstall: coverage
+    Found existing installation: coverage 3.7.1
+    Uninstalling coverage-3.7.1:
+      Successfully uninstalled coverage-3.7.1
+<span style="color: var(--ansi-red);">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+flask 1.1.4 requires click&lt;8.0,&gt;=5.1, but you have click 8.1.3 which is incompatible.
+datascience 0.10.6 requires coverage==3.7.1, but you have coverage 6.3.3 which is incompatible.
+datascience 0.10.6 requires folium==0.2.1, but you have folium 0.8.3 which is incompatible.
+coveralls 0.5 requires coverage&lt;3.999,&gt;=3.6, but you have coverage 6.3.3 which is incompatible.
+albumentations 0.1.12 requires imgaug&lt;0.2.7,&gt;=0.2.5, but you have imgaug 0.2.9 which is incompatible.</span><span>
+Successfully installed AutoROM.accept-rom-license-0.4.2 DataProperty-0.55.0 GitPython-3.1.27 Mako-1.2.0 PyEnchant-3.2.2 ale-py-0.7.4 alembic-1.7.7 arch-5.0.1 autopage-0.5.0 autorom-0.4.2 black-22.3.0 box2d-py-2.3.8 click-8.1.3 cliff-3.10.1 cloudpickle-2.0.0 cmaes-0.8.2 cmd2-2.4.1 colorama-0.4.4 colorlog-6.6.0 coverage-6.3.3 docker-pycreds-0.4.0 execnet-1.9.0 flake8-3.9.2 flake8-bugbear-22.4.25 gitdb-4.0.9 gym-0.21.0 gym-minigrid-1.0.3 importlab-0.7 isort-5.10.1 libcst-0.4.3 livereload-2.6.3 mbstrdecoder-1.1.0 mccabe-0.6.1 mypy-extensions-0.4.3 ninja-1.10.2.3 optuna-2.10.0 panda-gym-1.1.1 pathspec-0.9.0 pathtools-0.1.2 pathvalidate-2.5.0 pbr-5.9.0 platformdirs-2.5.2 property-cached-1.6.4 pyaml-21.10.1 pybullet-3.2.4 pycodestyle-2.7.0 pyflakes-2.3.1 pyperclip-1.8.2 pytablewriter-0.64.2 pytest-4.3.1 pytest-cov-2.9.0 pytest-env-0.6.2 pytest-forked-1.4.0 pytest-xdist-1.27.0 pytype-2022.5.10 pyyaml-6.0 rliable-1.0.7 sb3-contrib-1.5.0 scikit-optimize-0.9.0 scipy-1.7.3 sentry-sdk-1.5.12 setproctitle-1.2.3 shortuuid-1.0.9 smmap-5.0.0 sphinx-4.5.0 sphinx-autobuild-2021.3.14 sphinx-autodoc-typehints-1.18.1 sphinx-rtd-theme-1.0.0 sphinxcontrib-applehelp-1.0.2 sphinxcontrib-devhelp-1.0.2 sphinxcontrib-htmlhelp-2.0.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.3 sphinxcontrib.spelling-7.3.3 stable-baselines3-1.5.0 statsmodels-0.13.2 stevedore-3.5.0 tabledata-1.3.0 tcolorpy-0.1.2 toml-0.10.2 typed-ast-1.5.3 typepy-1.3.0 typing-inspect-0.7.1 wandb-0.12.16
+</span></pre></div></div><div class="display_data output-id-201"><div class="output_subarea output_text"><pre><span style="font-weight: bold; color: var(--ansi-red);">WARNING: The following packages were previously imported in this runtime:
+  [sphinxcontrib]
+You must restart the runtime in order to use newly installed versions.</span></pre></div><div style="padding-top: 10px;"><button class="colab restartruntime">Restart Runtime</button></div></div></div><span id="output-footer"></span></div></body></html>

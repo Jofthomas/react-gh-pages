@@ -1,0 +1,165 @@
+{
+    "basic_info": {
+      "name": "Joffrey THOMAS",
+      "titles": [ "Data Scientist", "Software Engineer", "Entrepreneur"],
+      "social": [
+        {
+          "name": "github",
+          "url": "https://github.com/Jofthomas",
+          "class": "fab fa-github"
+        },
+        {
+          "name": "Linkedin",
+          "url": "https://www.linkedin.com/in/joffrey-thomas/",
+          "class": "fab fa-linkedin"
+        }
+      ],
+      "image": "profile.jpg"
+    },
+    "skills": {
+      "icons": [
+        {
+          "name": "Python",
+          "class": "devicon-python-plain",
+          "level": "95"
+        },
+        {
+          "name": "SQL",
+          "class": "devicon-mysql-plain",
+          "level": "75"
+        },
+        {
+          "name": "JavaScript",
+          "class": "devicon-javascript-plain",
+          "level": "90"
+        },
+        {
+          "name": "React",
+          "class": "devicon-react-original",
+          "level": "80"
+        },
+        {
+          "name": "AWS",
+          "class": "devicon-amazonwebservices-plain",
+          "level": "80"
+        },
+        {
+          "name": "Tensorflow",
+          "class": "devicon-tensorflow-original",
+          "level": "80"
+        },
+        {
+          "name": "pytorch",
+          "class": "devicon-pytorch-plain",
+          "level": "80"
+        },
+        {
+          "name": "pycharm",
+          "class": "devicon-pycharm-plain",
+          "level": "80"
+        },
+        {
+          "name": "Pandas",
+          "class": "devicon-pandas-plain",
+          "level": "80"
+        },
+        {
+          "name": "Numpy",
+          "class": "devicon-numpy-plain",
+          "level": "80"
+        },
+        {
+          "name": "matlab",
+          "class": "devicon-matlab-plain",
+          "level": "90"
+        },
+        {
+          "name": "jupyter",
+          "class": "devicon-jupyter-plain",
+          "level": "90"
+        },
+        {
+          "name": "GraphQl",
+          "class": "devicon-graphql-plain",
+          "level": "75"
+        },
+        {
+          "name": "C++",
+          "class": "devicon-cplusplus-plain",
+          "level": "75"
+        },
+        {
+          "name": "Java",
+          "class": "devicon-java-plain",
+          "level": "75"
+        },
+        {
+          "name": "Kubernetes",
+          "class": "devicon-kubernetes-plain",
+          "level": "75"
+        },
+        {
+          "name": "docker",
+          "class": "devicon-docker-plain",
+          "level": "75"
+        },
+        {
+          "name": "MongoDB",
+          "class": "devicon-mongodb-plain",
+          "level": "75"
+        },
+        {
+          "name": "pytest",
+          "class": "devicon-pytest-plain",
+          "level": "75"
+        },
+        {
+          "name": "opencv",
+          "class": "devicon-opencv-plain",
+          "level": "75"
+        },
+        {
+          "name": "Anaconda",
+          "class": "devicon-anaconda-original",
+          "level": "75"
+        },
+        {
+          "name": "Linux",
+          "class": "devicon-linux-plain",
+          "level": "75"
+        },
+        {
+          "name": "sqlalchemy",
+          "class": "devicon-sqlalchemy-plain",
+          "level": "75"
+        },
+        {
+          "name": "Redux",
+          "class": "devicon-redux-original",
+          "level": "75"
+        },
+        
+        {
+          "name": "redis",
+          "class": "devicon-redis-plain",
+          "level": "85"
+        },
+        {
+          "name": "bash",
+          "class": "devicon-bash-plain",
+          "level": "65"
+        },
+        {
+          "name": "git",
+          "class": "devicon-git-plain",
+          "level": "65"
+        },
+        
+        {
+          "name": "Flask",
+          "class": "devicon-flask-plain",
+          "level": "80"
+        }
+      ]
+    }
+  }
