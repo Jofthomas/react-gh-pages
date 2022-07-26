@@ -11,7 +11,7 @@
     },
     "projects": [
       {
-        "title": "Mario Bros AI",
+        "title": "Mario Bros AI !!!!!",
         "startDate": "Reinforcement Learning",
         "description": "A project that will let you play the first level of one of the most iconic games. You can then enjoy a trained agent perform on this same level. This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
