@@ -1,7 +1,7 @@
 {
     "basic_info": {
       "description_header": "Hi",
-      "description": "👋 I'm Joffrey THOMAS, Currently searching for a job as a Data Scientist in the Paris Area. I grew up in the south west of France and live brought me to differents places like belgium or San Francisco. Passionate about computer science, it enables me to bring my creativity and my ideas to life. Ai models can sometime be impressive but not very interractive, hence, I chose to play with models that are very visual for the user. I hope you can have fun on this website ! 🕹️.",
+      "description": "👋 I'm Joffrey THOMAS, Currently workinng as a Data Scientist in the Paris Area. I grew up in the south west of France and work brought me to differents places like belgium or San Francisco. Passionate about computer science, it enables me to bring my creativity and my ideas to life. Ai models can sometime be impressive but not very interractive, hence, I chose to play with models that are very visual for the user. I hope you can have fun on this website ! 🕹️.",
       "section_name": {
         "about": "About me",
         "projects": "Projects",
@@ -13,10 +13,10 @@
       {
         "title": "Mario Bros AI",
         "startDate": "Reinforcement Learning",
-        "description": "A project that will let you play the first level of one of the most iconic games. You can then enjoy a trained agent perform on this same level.",
+        "description": "A project that will let you play the first level of one of the most iconic games. You can then enjoy a trained agent perform on this same level. This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/Mario.png",
-          "http://192.168.43.3:5000/Mario",        
+          "http://194.233.162.41:5000/Mario",        
           "images/portfolio/Mario-agent-step-0-to-step-50000.mp4"
         ],
         "url": "",
@@ -30,12 +30,8 @@
             "name": "React"
           },
           {
-            "class": "devicon-react-plain",
-            "name": "React"
-          },
-          {
-            "class": "devicon-react-plain",
-            "name": "React"
+            "class": "devicon-flask-original",
+            "name": "Flask"
           },
           {
             "class": "devicon-jupyter-plain",
@@ -49,27 +45,35 @@
       {
         "title": "SpaceInvader 👾",
         "startDate": "Reinforcement Learning",
-        "description": "Training an Ai to play this famous game. Can you beat it ? ",
+        "description": "Training an Ai to play this famous game. Can you Perform Better ? Probably... This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/SpaceInv.png",
-          "http://192.168.43.3:5000/SpaceInvaders"
+          "http://194.233.162.41:5000/SpaceInvaders"
         ],
         "url": "https://github.com",
         "technologies": [
           {
-            "class": "devicon-react-original",
+            "class": "devicon-python-plain",
+            "name": "Python"
+          },
+          {
+            "class": "devicon-react-plain",
             "name": "React"
           },
           {
-            "class": "devicon-javascript-plain",
-            "name": "JavaScript"
+            "class": "devicon-flask-original",
+            "name": "Flask"
+          },
+          {
+            "class": "devicon-jupyter-plain",
+            "name": "Jupyter"
           }
         ]
       },
       {
         "title": "Pokemon Showdown",
         "startDate": "Reinforcement Learning",
-        "description": "Pokemon Bot that can play on a Gen8 random format. To play against him, chose a random name and send a challenge to RandomRLAI",
+        "description": "Pokemon Bot that can play on a Gen8 random format. To play against him, chose a random name and send a challenge to RandomRLAI. At this point, the logic is handled by a bot using Poke-env library",
         "images": [
           "images/portfolio/PokeShow.png",
           "https://play.pokemonshowdown.com/"
@@ -81,21 +85,25 @@
             "name": "Python"
           },
           {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
+            "class": "devicon-react-plain",
+            "name": "React"
           },
           {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
+            "class": "devicon-flask-original",
+            "name": "Flask"
+          },
+          {
+            "class": "devicon-jupyter-plain",
+            "name": "Jupyter"
           }
         ]
       },{
         "title": "Breakout",
         "startDate": "Reinforcement Learning",
-        "description": "Agent that can play Breakout better than you.",
+        "description": "Agent that can play Breakout better than you. This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/Brekout.png",
-          "http://192.168.43.3:5000/Breakout",
+          "http://194.233.162.41:5000/Breakout",
           "images/portfolio/final-model-a2c-BreakoutNoFrameskip-v4-step-0-to-step-20000.mp4"
         ],
         "url": "https://github.com",
@@ -105,18 +113,22 @@
             "name": "Python"
           },
           {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
+            "class": "devicon-react-plain",
+            "name": "React"
           },
           {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
+            "class": "devicon-flask-original",
+            "name": "Flask"
+          },
+          {
+            "class": "devicon-jupyter-plain",
+            "name": "Jupyter"
           }
         ]
       },{
         "title": "Racing car",
         "startDate": "Reinforcement Learning",
-        "description": "Agent that can play Pokemon on a random format.",
+        "description": "Agent that drive a car on an atari game. This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/RacingCar.png",
           "images/portfolio/random-agent-CarRacing-v0-step-10001-to-step-20001.mp4"
@@ -129,21 +141,25 @@
             "name": "Python"
           },
           {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
+            "class": "devicon-react-plain",
+            "name": "React"
           },
           {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
+            "class": "devicon-flask-original",
+            "name": "Flask"
+          },
+          {
+            "class": "devicon-jupyter-plain",
+            "name": "Jupyter"
           }
         ]
       },{
         "title": "Chess",
         "startDate": "Bot",
-        "description": "Bot that can play Chess reasonably well. AT least it can beat me a total amateur",
+        "description": "Bot that can play Chess reasonably well. AT least it can beat me: A total amateur",
         "images": [
           "images/portfolio/PipChess.png",
-          "http://192.168.43.3:5000/"
+          "http://194.233.162.41:5000/"
         ],
         "url": "https://github.com",
         "technologies": [
@@ -152,12 +168,16 @@
             "name": "Python"
           },
           {
-            "class": "devicon-flask-plain",
+            "class": "devicon-react-plain",
+            "name": "React"
+          },
+          {
+            "class": "devicon-flask-original",
             "name": "Flask"
           },
           {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
+            "class": "devicon-jupyter-plain",
+            "name": "Jupyter"
           }
         ]
       }
@@ -168,14 +188,16 @@
         "title": "Data Scientist",
         "years": "01.2021 - 09.2021",
         "mainTech": [
-          "Artificial Intelligence"
+          "Artificial Intelligence",
+          "Transformers"
         ],
         "technologies": [
           "Python",
           "Flask",
+          "Docker",
           "JavaScript",
           "Bert",
-          "Keras",
+          "Transformers",
           "Scikit-learn",
           "Cuda"
         ]
@@ -189,7 +211,7 @@
         "technologies": [
           "JavaScript",
           "AWS",
-          "Keras"
+          "Python"
         ]
       },{
         "company": "CTI Santé",
@@ -215,7 +237,6 @@
           "Matlab",
           "Python",
           "sckit-learn",
-          "Keras",
           "EEG"
         ]
       },
