@@ -16,7 +16,7 @@
         "description": "A project that will let you play the first level of one of the most iconic games. You can then enjoy a trained agent perform on this same level. This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/Mario.png",
-          "http://194.233.162.41:5000/Mario",        
+          "https://194.233.162.41/",        
           "images/portfolio/Mario-agent-step-0-to-step-50000.mp4"
         ],
         "url": "",
