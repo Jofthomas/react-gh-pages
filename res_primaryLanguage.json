@@ -11,12 +11,12 @@
     },
     "projects": [
       {
-        "title": "Mario Bros AI! ",
+        "title": "Mario Bros AI",
         "startDate": "Reinforcement Learning",
         "description": "A project that will let you play the first level of one of the most iconic games. You can then enjoy a trained agent perform on this same level. This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/Mario.png",
-          "https://194.233.162.41/",        
+          "https://194.233.162.41/Mario",        
           "images/portfolio/Mario-agent-step-0-to-step-50000.mp4"
         ],
         "url": "",
@@ -48,7 +48,7 @@
         "description": "Training an Ai to play this famous game. Can you Perform Better ? Probably... This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/SpaceInv.png",
-          "https://194.233.162.41:5000/SpaceInvaders"
+          "https://194.233.162.41/SpaceInvaders"
         ],
         "url": "https://github.com",
         "technologies": [
@@ -103,7 +103,7 @@
         "description": "Agent that can play Breakout better than you. This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/Brekout.png",
-          "http://194.233.162.41:5000/Breakout",
+          "https://194.233.162.41/Breakout",
           "images/portfolio/final-model-a2c-BreakoutNoFrameskip-v4-step-0-to-step-20000.mp4"
         ],
         "url": "https://github.com",
@@ -159,7 +159,7 @@
         "description": "Bot that can play Chess reasonably well. AT least it can beat me: A total amateur",
         "images": [
           "images/portfolio/PipChess.png",
-          "http://194.233.162.41:5000/"
+          "https://194.233.162.41/"
         ],
         "url": "https://github.com",
         "technologies": [

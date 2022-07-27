@@ -45,7 +45,7 @@
       "description": "Training an Ai to play this famous game. Can you beat it ? ",
       "images": [
         "images/portfolio/SpaceInv.png",
-          "http://194.233.162.41:5000/SpaceInvaders"
+          "https://194.233.162.41/SpaceInvaders"
       ],
       "url": "https://github.com",
       "technologies": [
@@ -100,7 +100,7 @@
       "description": "Agent that can play Breakout better than you.",
       "images": [
         "images/portfolio/Brekout.png",
-        "http://194.233.162.41:5000/Breakout",
+        "https://194.233.162.41/Breakout",
         "images/portfolio/final-model-a2c-BreakoutNoFrameskip-v4-step-0-to-step-20000.mp4"
       ],
       "url": "https://github.com",
@@ -156,7 +156,7 @@
       "description": "Bot that can play Chess reasonably well. AT least it can beat me a total amateur",
       "images": [
         "images/portfolio/PipChess.png",
-        "http://194.233.162.41:5000/"
+        "https://194.233.162.41/"
       ],
       "url": "https://github.com",
       "technologies": [
