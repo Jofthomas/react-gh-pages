@@ -10,13 +10,13 @@
     }
   },
   "projects": [
-    {
+    {       
       "title": "Mario Bros AI",
       "startDate": "Reinforcement Learning",
-      "description": "Agent qui apprend à jouer à ce jeux iconic",
+      "description": "Ce projet vous laisse jouer ai premier niveau de ce jeu iconique. Puis de regarder un agent de Reinforcement Learning jouer à ce même niveau. L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
       "images": [
         "images/portfolio/Mario.png",
-        "http://194.233.162.41:5000/Mario",        
+        "https://www.jofthomas.com/Mario",        
         "images/portfolio/Mario-agent-step-0-to-step-50000.mp4"
       ],
       "url": "",
@@ -42,10 +42,10 @@
     {
       "title": "SpaceInvader",
       "startDate": "Reinforcement Learning",
-      "description": "Training an Ai to play this famous game. Can you beat it ? ",
+      "description": "Entrainement d'une IA sur le jeu Space Invaders, joues tu mieux que l'IA ? Probablement ... L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
       "images": [
         "images/portfolio/SpaceInv.png",
-          "https://194.233.162.41/SpaceInvaders"
+          "https://www.jofthomas.com/SpaceInvaders"
       ],
       "url": "https://github.com",
       "technologies": [
@@ -69,8 +69,8 @@
     },
     {
       "title": "Pokemon Showdown",
-      "startDate": "Reinforcement Learning",
-      "description": "Agent that can play Pokemon on a random format.",
+      "startDate": "Bot",
+      "description": "Bot Pokemon qui joue à pokemon showdown sur un format 8G OU. Pour jouer contre lui, choisir un nom aléatoire en haut à gauche, puis recherchez 'RandomRLAI' et envoyez lui un challenge",
       "images": [
         "images/portfolio/PokeShow.png",
         "https://play.pokemonshowdown.com/"
@@ -97,10 +97,10 @@
     },{
       "title": "Breakout",
       "startDate": "Reinforcement Learning",
-      "description": "Agent that can play Breakout better than you.",
+      "description": "Agent de Reinforcement Learning qui apprend à jouer au casse brique.L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
       "images": [
         "images/portfolio/Brekout.png",
-        "https://194.233.162.41/Breakout",
+        "https://www.jofthomas.com/Breakout",
         "images/portfolio/final-model-a2c-BreakoutNoFrameskip-v4-step-0-to-step-20000.mp4"
       ],
       "url": "https://github.com",
@@ -125,7 +125,7 @@
     },{
       "title": "Racing car",
       "startDate": "Reinforcement Learning",
-      "description": "Agent that can play Pokemon on a random format.",
+      "description": "Agent de Reinforement Learning qui a été entrainé à jouer à un jeu de voiture Atari.L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
       "images": [
         "images/portfolio/RacingCar.png",
         "images/portfolio/random-agent-CarRacing-v0-step-10001-to-step-20001.mp4"
@@ -153,10 +153,10 @@
     },{
       "title": "Chess",
       "startDate": "Bot",
-      "description": "Bot that can play Chess reasonably well. AT least it can beat me a total amateur",
+      "description": "Bot pour le jeu d'échec",
       "images": [
         "images/portfolio/PipChess.png",
-        "https://194.233.162.41/"
+        "https://www.jofthomas.com/"
       ],
       "url": "https://github.com",
       "technologies": [
@@ -192,7 +192,7 @@
         "Python",
         "Flask",
         "Docker",
-        "JavaScript",
+        "JavaScript",   
         "Bert",
         "Transformers",
         "Scikit-learn",
