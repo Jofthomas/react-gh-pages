@@ -17,7 +17,7 @@
       "images": [
         "images/portfolio/Mario.png",
         "https://www.jofthomas.com/Mario",        
-        "images/portfolio/Mario-agent-step-0-to-step-50000.mp4"
+        "images/portfolio/mario-agent-step-0-to-step-10000_tm25WcNB.mp4"
       ],
       "url": "",
       "technologies": [
@@ -70,7 +70,7 @@
     {
       "title": "Pokemon Showdown",
       "startDate": "Bot",
-      "description": "Bot Pokemon qui joue à pokemon showdown sur un format 8G OU. Pour jouer contre lui, choisir un nom aléatoire en haut à gauche, puis recherchez 'RandomRLAI' et envoyez lui un challenge",
+      "description": "Bot RL Pokemon (Max dammage pour le moment ) qui joue à pokemon showdown sur un format 8G OU (important). Pour jouer contre lui, choisir un nom aléatoire en haut à gauche, puis recherchez 'RandomRLAI' et envoyez lui un challenge",
       "images": [
         "images/portfolio/PokeShow.png",
         "https://play.pokemonshowdown.com/"
@@ -180,6 +180,22 @@
     }
   ],
   "experience": [
+    {
+      "company": "Assystem",
+      "title": "Data Scientist",
+      "years": "07.2022 - Maintenant",
+      "mainTech": [
+        "Intelligence Artificielle",
+        "NLP","Computer Vision"
+      ],
+      "technologies": [
+        "Python",
+        "Flask",
+        "Docker",
+        "JavaScript",
+        "Transformers"
+      ]
+    },
     {
       "company": "Ecole Polytechnique",
       "title": "Data Scientist",
