@@ -1,0 +1,270 @@
+{
+  "basic_info": {
+    "description_header": "Bonjour",
+    "description": "👋 Bienvenue sur mon site. Je suis Joffrey THOMAS. Data Scientist en région Parisienne mais originaire d'Hossegor dans le Sud-Ouest ! Les IA sont souvent très performantes, mais peu attractives aux personnes non initiés à la data science. C'est pourquoi j'ai décidé de démontrer mes compétences sur des projets très visuels sur ce site. Bonne visite ! 🕹️",
+    "section_name": {
+      "about": "A propos de moi",
+      "projects": "Projets",
+      "skills": "Compétences",
+      "experience": "Experiences"
+    }
+  },
+  "projects": [
+    {       
+      "title": "Mario Bros AI",
+      "startDate": "Reinforcement Learning",
+      "description": "Ce projet vous laisse jouer ai premier niveau de ce jeu iconique. Puis de regarder un agent de Reinforcement Learning jouer à ce même niveau. L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
+      "images": [
+        "images/portfolio/Mario.png",
+        "https://www.jofthomas.com/Mario",        
+        "images/portfolio/mario-agent-step-0-to-step-10000_tm25WcNB.mp4"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        },
+        {
+          "class": "devicon-flask-original",
+          "name": "Flask"
+        },
+        {
+          "class": "devicon-jupyter-plain",
+          "name": "Jupyter"
+        }
+      ]
+    },
+    {
+      "title": "SpaceInvader",
+      "startDate": "Reinforcement Learning",
+      "description": "Entrainement d'une IA sur le jeu Space Invaders, joues tu mieux que l'IA ? Probablement ... L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
+      "images": [
+        "images/portfolio/SpaceInv.png",
+          "https://www.jofthomas.com/SpaceInvaders"
+      ],
+      "url": "https://github.com",
+      "technologies": [
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        },
+        {
+          "class": "devicon-flask-original",
+          "name": "Flask"
+        },
+        {
+          "class": "devicon-jupyter-plain",
+          "name": "Jupyter"
+        }
+      ]
+    },
+    {
+      "title": "Pokemon Showdown",
+      "startDate": "Bot",
+      "description": "Bot RL Pokemon (Max dammage pour le moment ) qui joue à pokemon showdown sur un format 8G OU (important). Pour jouer contre lui, choisir un nom aléatoire en haut à gauche, puis recherchez 'RandomRLAI' et envoyez lui un challenge",
+      "images": [
+        "images/portfolio/PokeShow.png",
+        "https://play.pokemonshowdown.com/"
+      ],
+      "url": "https://github.com",
+      "technologies": [
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        },
+        {
+          "class": "devicon-react-plain",
+          "name": "React"
+        },
+        {
+          "class": "devicon-flask-original",
+          "name": "Flask"
+        },
+        {
+          "class": "devicon-jupyter-plain",
+          "name": "Jupyter"
+        }
+      ]
+    },{
+      "title": "Breakout",
+      "startDate": "Reinforcement Learning",
+      "description": "Agent de Reinforcement Learning qui apprend à jouer au casse brique.L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
+      "images": [
+        "images/portfolio/Brekout.png",
+        "https://www.jofthomas.com/Breakout",
+        "images/portfolio/final-model-a2c-BreakoutNoFrameskip-v4-step-0-to-step-20000.mp4"
+      ],
+      "url": "https://github.com",
+      "technologies": [
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        },
+        {
+          "class": "devicon-react-plain",
+          "name": "React"
+        },
+        {
+          "class": "devicon-flask-original",
+          "name": "Flask"
+        },
+        {
+          "class": "devicon-jupyter-plain",
+          "name": "Jupyter"
+        }
+      ]
+    },{
+      "title": "Racing car",
+      "startDate": "Reinforcement Learning",
+      "description": "Agent de Reinforement Learning qui a été entrainé à jouer à un jeu de voiture Atari.L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
+      "images": [
+        "images/portfolio/RacingCar.png",
+        "images/portfolio/random-agent-CarRacing-v0-step-10001-to-step-20001.mp4"
+        
+      ],
+      "url": "https://github.com",
+      "technologies": [
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        },
+        {
+          "class": "devicon-react-plain",
+          "name": "React"
+        },
+        {
+          "class": "devicon-flask-original",
+          "name": "Flask"
+        },
+        {
+          "class": "devicon-jupyter-plain",
+          "name": "Jupyter"
+        }
+      ]
+    },{
+      "title": "Chess",
+      "startDate": "Bot",
+      "description": "Bot pour le jeu d'échec",
+      "images": [
+        "images/portfolio/PipChess.png",
+        "https://www.jofthomas.com/"
+      ],
+      "url": "https://github.com",
+      "technologies": [
+        {
+          "class": "devicon-python-plain",
+          "name": "Python"
+        },
+        {
+          "class": "devicon-react-plain",
+          "name": "React"
+        },
+        {
+          "class": "devicon-flask-original",
+          "name": "Flask"
+        },
+        {
+          "class": "devicon-jupyter-plain",
+          "name": "Jupyter"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Assystem",
+      "title": "Data Scientist",
+      "years": "07.2022 - Maintenant",
+      "mainTech": [
+        "Intelligence Artificielle",
+        "NLP","Computer Vision"
+      ],
+      "technologies": [
+        "Python",
+        "Flask",
+        "Docker",
+        "JavaScript",
+        "Transformers"
+      ]
+    },
+    {
+      "company": "Ecole Polytechnique",
+      "title": "Data Scientist",
+      "years": "01.2021 - 09.2021",
+      "mainTech": [
+        "Intelligence Artificielle",
+        "Transformers"
+      ],
+      "technologies": [
+        "Python",
+        "Flask",
+        "Docker",
+        "JavaScript",   
+        "Bert",
+        "Transformers",
+        "Scikit-learn",
+        "Cuda"
+      ]
+    },{
+      "company": "SAS Sheepit",
+      "title": "Fondateur",
+      "years": "08.2019 - 01.2021",
+      "mainTech": [
+        "Javascript/Reinforcement Learning"
+      ],
+      "technologies": [
+        "JavaScript",
+        "AWS",
+        "Python"
+      ]
+    },{
+      "company": "CTI Santé",
+      "title": "Data Scientist",
+      "years": "04.2019 - 08.2019",
+      "mainTech": [
+        "React/SQL"
+      ],
+      "technologies": [
+        "React",
+        "SQL",
+        "Scikit-learn",
+        "PHP"
+      ]
+    },{
+      "company": "Université de Californie, San Francisco",
+      "title": "Stagiaire Data Scientist",
+      "years": "02.2017 - 08.2017",
+      "mainTech": [
+        "Intelligence Artificielle"
+      ],
+      "technologies": [
+        "Matlab",
+        "Python",
+        "sckit-learn",
+        "EEG"
+      ]
+    },
+    {
+      "company": "ESPCI Paris",
+      "title": "Stagiaire Data Scientist",
+      "years": "04.2017 - 09.2017",
+      "mainTech": [
+        "Matlab"
+      ],
+      "technologies": [
+        "Matlab",
+        "Machine learning",
+        "EEG"
+      ]
+    }
+  ]
+}
