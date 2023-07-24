@@ -10,6 +10,27 @@
       }
     },
     "projects": [
+       {
+        "title": "Hugging Face Game Jam: Everchanging Quest",
+        "startDate": "Game dev",
+        "description": "During 48H for a game jam oraganised by hugging Face on the theme 'EXPANDING', I coded a game to desmonstrate the power of some LLM.",
+        "images": [
+          "images/portfolio/GameJam.jpg",
+          "https://www.youtube.com/watch?v=gXXOP3RI-LY",
+          "https://www.youtube.com/watch?v=UG9-gOAs2-4"     
+          
+        ],
+        "url": "https://github.com/Jofthomas/LLM-usage-in-everchanging-quest",
+        "technologies": [
+          {
+            "class": "devicon-python-plain",
+            "name": "Python"
+          }
+
+
+          
+        ]
+      },
       {
         "title": "Mario Bros AI",
         "startDate": "Reinforcement Learning",
@@ -42,6 +63,7 @@
           
         ]
       },
+       
       {
         "title": "SpaceInvader 👾",
         "startDate": "Reinforcement Learning",
