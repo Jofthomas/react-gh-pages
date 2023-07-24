@@ -11,8 +11,8 @@
   },
   "projects": [
     {
-      "title": "Hugging Face Game Jam: Everchanging Quest",
-      "startDate": "Game dev",
+      "title": "Hugging Face Game Jam",
+      "startDate": "Everchanging Quest",
       "description": "Pour la Game Jam Hugging Face, j'ai codé un jeu pygame pour démontrer le pouvoir des LLM",
       "images": [
         "images/portfolio/GameJam.jpg",
