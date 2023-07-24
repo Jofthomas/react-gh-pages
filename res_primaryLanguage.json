@@ -15,9 +15,9 @@
         "startDate": "Game dev",
         "description": "During 48H for a game jam oraganised by hugging Face on the theme 'EXPANDING', I coded a game to desmonstrate the power of some LLM.",
         "images": [
-          "images/portfolio/GameJam.jpg",
-          "https://www.youtube.com/watch?v=gXXOP3RI-LY",
-          "https://www.youtube.com/watch?v=UG9-gOAs2-4"     
+          "images/portfolio/GameJam.jpeg",
+          "images/portfolio/EVERCHANGING QUEST ( HuggingFace Game Jam ).mp4",
+          "images/portfolio/Results of the Open Source AI Game Jam.mp4"     
           
         ],
         "url": "https://github.com/Jofthomas/LLM-usage-in-everchanging-quest",
