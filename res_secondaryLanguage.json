@@ -16,8 +16,8 @@
       "description": "Pour la Game Jam Hugging Face, j'ai codé un jeu pygame pour démontrer le pouvoir des LLM",
       "images": [
         "images/portfolio/GameJam.png",
-        "https://www.youtube.com/watch?v=gXXOP3RI-LY",
-        "https://www.youtube.com/watch?v=UG9-gOAs2-4"     
+        "images/portfolio/EVERCHANGING QUEST ( HuggingFace Game Jam ).mp4",
+        "images/portfolio/Results of the Open Source AI Game Jam.mp4"         
         
       ],
       "url": "https://github.com/Jofthomas/LLM-usage-in-everchanging-quest",
