@@ -37,7 +37,7 @@
       "description": "Ce projet vous laisse jouer ai premier niveau de ce jeu iconique. Puis de regarder un agent de Reinforcement Learning jouer à ce même niveau. L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
       "images": [
         "images/portfolio/Mario.png",
-        "https://www.jofthomas.com/Mario",        
+        "https://www.jofthomas.fr/Mario",        
         "images/portfolio/mario-agent-step-0-to-step-10000_tm25WcNB.mp4"
       ],
       "url": "",
@@ -66,7 +66,7 @@
       "description": "Entrainement d'une IA sur le jeu Space Invaders, joues tu mieux que l'IA ? Probablement ... L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
       "images": [
         "images/portfolio/SpaceInv.png",
-          "https://www.jofthomas.com/SpaceInvaders"
+          "https://www.jofthomas.fr/SpaceInvaders"
       ],
       "url": "https://github.com",
       "technologies": [
@@ -121,7 +121,7 @@
       "description": "Agent de Reinforcement Learning qui apprend à jouer au casse brique.L'agent à été entrainé pendant 5M de pas sur mon ordinateur portable",
       "images": [
         "images/portfolio/Brekout.png",
-        "https://www.jofthomas.com/Breakout",
+        "https://www.jofthomas.fr/Breakout",
         "images/portfolio/final-model-a2c-BreakoutNoFrameskip-v4-step-0-to-step-20000.mp4"
       ],
       "url": "https://github.com",
@@ -177,7 +177,7 @@
       "description": "Bot pour le jeu d'échec",
       "images": [
         "images/portfolio/PipChess.png",
-        "https://www.jofthomas.com/"
+        "https://www.jofthomas.fr/"
       ],
       "url": "https://github.com",
       "technologies": [

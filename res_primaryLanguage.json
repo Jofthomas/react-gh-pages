@@ -37,7 +37,7 @@
         "description": "A project that will let you play the first level of one of the most iconic games. You can then enjoy a trained agent perform on this same level. This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/Mario.png",
-          "https://www.jofthomas.com/Mario",        
+          "https://www.jofthomas.fr/Mario",        
           "images/portfolio/mario-agent-step-0-to-step-10000_tm25WcNB.mp4"
         ],
         "url": "",
@@ -70,7 +70,7 @@
         "description": "Training an Ai to play this famous game. Can you Perform Better ? Probably... This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/SpaceInv.png",
-          "https://www.jofthomas.com/SpaceInvaders"
+          "https://www.jofthomas.fr/SpaceInvaders"
         ],
         "url": "https://github.com",
         "technologies": [
@@ -125,7 +125,7 @@
         "description": "Agent that can play Breakout better than you. This agent was trained using OpenAI's Gym environment during 5M steps on my personal computer",
         "images": [
           "images/portfolio/Brekout.png",
-          "https://www.jofthomas.com/Breakout",
+          "https://www.jofthomas.fr/Breakout",
           "images/portfolio/final-model-a2c-BreakoutNoFrameskip-v4-step-0-to-step-20000.mp4"
         ],
         "url": "https://github.com",
@@ -181,7 +181,7 @@
         "description": "Bot that can play Chess reasonably well. AT least it can beat me: A total amateur",
         "images": [
           "images/portfolio/PipChess.png",
-          "https://www.jofthomas.com/"
+          "https://www.jofthomas.fr/"
         ],
         "url": "https://github.com",
         "technologies": [
